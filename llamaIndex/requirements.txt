@@ -1,0 +1,9 @@
+streamlit
+openai
+pypdf
+python-dotenv
+ipykernel
+boto3
+llama-index
+llama-index-llms-bedrock
+llama-index-embeddings-bedrock

@@ -1,0 +1,22 @@
+# Streamlit frontend
+streamlit
+requests
+pandas
+
+# FastAPI backend
+fastapi
+uvicorn
+pydantic
+
+# Data and AWS (if needed)
+boto3
+
+# For charting (if used in visualization/charts.py)
+matplotlib
+plotly
+
+# For .env and dotenv usage (if used)
+python-dotenv
+
+# Jupyter (optional, for notebooks)
+jupyter

@@ -1,0 +1,50 @@
+# Customers, Orders, Order Items & Products Table Knowledge Base
+
+## Customers Table
+
+### Table Overview
+This table contains customer information and is stored in Amazon S3. It is queried using Amazon Athena and follows the OpenCSVSerde format.
+
+### Schema Details
+- **customerid (STRING):** Unique customer identifier. Primary key.
+- **firstname (STRING):** Customer's first name.
+- **lastname (STRING):** Customer's last name.
+- **email (STRING):** Customer's email address. Can be used for filtering and grouping.
+- **phonenumber (STRING):** Customer's contact number. May contain country codes.
+
+## Orders Table
+
+### Table Overview
+This table contains details of customer orders and is stored in Amazon S3. It is queried using Amazon Athena and follows the OpenCSVSerde format.
+
+### Schema Details
+- **orderid (STRING):** Unique identifier for each order. Primary key.
+- **customerid (STRING):** Identifier linking the order to a customer.
+- **orderdate (STRING):** Date when the order was placed.
+- **orderamount (STRING):** Total amount for the order.
+- **orderstatus (STRING):** Current status of the order (e.g., Pending, Shipped, Delivered).
+
+## Order Items Table
+
+### Table Overview
+This table contains order item details related to customer orders and is stored in Amazon S3. It is queried using Amazon Athena and follows the OpenCSVSerde format.
+
+### Schema Details
+- **orderitemid (STRING):** Unique identifier for each order item.
+- **orderid (STRING):** Identifier linking the item to an order.
+- **productid (STRING):** Identifier for the product in the order.
+- **quantity (STRING):** Number of units purchased for the product.
+- **unitprice (STRING):** Price per unit of the product.
+
+## Products Table
+
+### Table Overview
+This table contains product information and is stored in Amazon S3. It is queried using Amazon Athena and follows the OpenCSVSerde format.
+
+### Schema Details
+- **productid (STRING):** Unique identifier for each product. Primary key.
+- **productname (STRING):** Name of the product.
+- **category (STRING):** Category under which the product is classified.
+- **price (STRING):** Price of the product.
+- **stockquantity (STRING):** Available stock quantity for the product.
+
